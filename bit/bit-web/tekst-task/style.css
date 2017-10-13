@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Rye');
+@font-face {
+    font-family: "Typo Gotika";
+    src: url("font/Typo Gotika Black Demo.otf");
+}
+
+p {
+    font-size: 32px;
+    font-weight:500;
+}
+
+.par1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+    font-family: 'Indie Flower', cursive;
+    text-align: right;
+    text-decoration: underline ;
+    text-decoration-color: violet;
+    text-shadow: 4px 4px 4px violet;
+    letter-spacing: 5px;
+    line-height: 45px;
+}
+
+.par1:hover {
+    color: green;
+    text-decoration-color: green;
+    text-shadow: 4px 4px 4px green;
+}
+
+.par1 span {
+    font-size:40px;
+    font-style: italic;
+
+}
+
+.par2 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-family: 'Rye', cursive;
+    text-align: left;
+    text-decoration:line-through;
+    text-decoration-color: blue;
+    text-transform: uppercase;
+    text-indent: 20px;
+}
+
+.par2:hover {
+    background-color: yellow;
+    text-decoration: none;
+}
+
+.par3 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+    font-family: "Typo Gotika";
+    text-align: center;
+    text-decoration:overline;
+    text-decoration-color: rgb(0, 255, 64);
+}
+
+.par3::first-line {
+    color: red;
+}
