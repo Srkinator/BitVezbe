@@ -1,0 +1,57 @@
+.box {
+    height: 200px;
+    width: 200px;
+    position: relative;
+ 
+}
+
+.red {
+    background-color: red;
+    
+}
+
+.orange {
+    background-color: orange;
+
+
+}
+
+.black {
+    background-color: black;
+}
+
+.relative1 {
+    bottom: 50px;
+    left: 100px;
+}
+
+.relative2 {
+    bottom: 100px;
+    left: 200px;
+}
+
+.absolute {
+    position: absolute;
+    
+}
+
+.pom1{
+    right: 0px;
+    z-index: 2;
+}
+
+.pom2{
+    right: 100px;
+   bottom: -250px;
+    z-index: 1;
+}
+
+.pom3 {
+    right: 200px;
+    bottom: -300px;
+    z-index: 0;
+
+}
+#key {
+    position: relative;
+}

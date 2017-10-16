@@ -1,0 +1,56 @@
+.container {
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.big {
+    width: 100%;
+}
+
+.element {
+    width: 300px;
+    float: left;
+    text-align: left;
+    margin: 10px;
+}
+
+.clear {
+    clear: left;
+}
+
+.list {
+    list-style: none;
+    background-color: rgb(236, 176, 72);
+    text-align: left;
+    float: right;
+    padding: 20px;
+}
+
+li {
+    border-bottom: 0.2px solid rgb(128, 124, 124);
+    padding: 3px;
+}
+
+#nav{
+    height: 40px;
+    width: 960px;
+    background-color: red;
+    text-align: right;
+}
+#pic{
+    width: 960px;
+    height: 600px;
+}
+
+.elem {
+    height: 40px;
+    width: 80px;
+    float: right;
+    text-align: center;
+    padding-top: 10px;
+}
+.elem a {
+    text-decoration: none;
+    color: white;
+}
