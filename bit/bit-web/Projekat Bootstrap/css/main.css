@@ -1,0 +1,79 @@
+.navbar-toggler {
+  background-color: #18bc9c; }
+
+#navigacija {
+  background-color: #524c4c; }
+
+a.navbar-brand {
+  color: white !important; }
+
+.navbar-toggler {
+  color: white !important; }
+
+.firstdiv {
+  background-color: #18bc9c;
+  display: table; }
+  .firstdiv img {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    width: 90%;
+    margin: 0px auto; }
+
+.cell {
+  display: table-cell; }
+  .cell h1 {
+    color: white;
+    font-weight: 600;
+    text-align: center; }
+  .cell p {
+    color: white;
+    padding-bottom: 30px;
+    text-align: center; }
+
+.images img {
+  width: 100%;
+  margin: 10px auto;
+  padding-left: 30px; }
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  padding-bottom: 20px;
+  padding-top: 40px; }
+
+.about {
+  background-color: #18bc9c;
+  padding-top: 30px;
+  margin-top: 50px;
+  padding-bottom: 50px; }
+  .about h1 {
+    color: white;
+    text-align: center; }
+  .about p {
+    color: white;
+    text-align: left;
+    font-weight: 700;
+    padding-bottom: 30px; }
+
+.findoutmore {
+  background-color: #18bc9c;
+  display: block;
+  margin: 0px auto;
+  border: 2px solid white;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 10px; }
+
+.forma {
+  padding: 10px; }
+  .forma input {
+    margin-bottom: 5px;
+    width: 100%;
+    padding: 10px; }
+  .forma textarea {
+    width: 100%; }
+  .forma button {
+    background-color: #18bc9c; }
+
+/*# sourceMappingURL=main.css.map */
