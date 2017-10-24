@@ -76,4 +76,37 @@ h1 {
   .forma button {
     background-color: #18bc9c; }
 
+footer {
+  background-color: #2c3e50;
+  color: white; }
+  footer img {
+    width: 15%;
+    padding: 0px 10px;
+    border-radius: 50%; }
+  @media screen and (min-width: 768px) {
+    footer a img {
+      width: 25%; } }
+  @media screen and (min-width: 990px) {
+    footer a img {
+      width: 25%; }
+    footer .navbar-nav {
+      float: right; } }
+  footer h2 {
+    margin: 40px 0px; }
+  footer p {
+    margin: 0px 0px;
+    padding: 0px 0px; }
+  footer .futer {
+    display: block;
+    margin: 0px auto;
+    text-align: center; }
+    footer .futer .row {
+      text-align: center;
+      margin: 0px auto; }
+    footer .futer .bug {
+      width: 100%; }
+  footer #kraj {
+    text-align: center;
+    margin-top: 50px; }
+
 /*# sourceMappingURL=main.css.map */
