@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h1>Movie festival</h1>
+    <form method='post'><input type='hidden' name='form-name' value='form 1' id="main-form"/>
+        <fieldset name="movie" id="fieldset-movie">
+            <p>Please fill in the form</p>
+            <p>Movie</p>
+            <fieldset id="firstField">
+                <!-- Title input -->
+                <label>Title</label>
+                <input type="text" name="movie-title" class="movie-title" placeholder="Title" required>
+
+                <!-- Movie length input -->
+                <label>Length (min)</label>
+                <input type="number" name="movie-length" class="movie-length" placeholder="Length in min" required>
+
+                <!-- Genre select dropdown  -->
+                <select name="genre-select" class="genre-select">
+                    <option value="">-</option>
+                    <option value="drama">Drama</option>
+                    <option value="action">Action</option>
+                    <option value="horror">Horror</option>
+                    <option value="commedy">Commedy</option>
+                </select>
+
+                <!-- Error message initialy empty -->
+                <div class="movie-error error"></div>
+
+
+                <!-- Crete movie button -->
+                <input type="button" class="create-movie" value="Create movie">
+
+                <!-- Movie list place holder -->
+                <div class="movie-list"></div>
+            </fieldset>
+            <div class="total-length">
+                All movies length:
+                <span></span>
+            </div>
+
+            <p>Program</p>
+
+            <fieldset>
+                <label>Date</label>
+                <input type="date" name="program-date" class="program-date">
+
+                <!-- Error message initialy empty -->
+                <div class="program-error error"></div>
+
+                <input type="button" class="create-program" value="Create program">
+                <div class="program-list"></div>
+
+                <hr>
+
+                <label for="movie-select">Movie</label>
+                <select name="movie-select" class="movie-select">
+                    <option value="">-</option>
+                </select>
+
+                <label for="program-select">Program</label>
+                <select name="program-select" class="program-select">
+                    <option value="">-</option>
+                </select>
+
+                <div class="assign-error error"></div>
+
+                <input type="button" class="add-movie" value="Add movie to program">
+            </fieldset>
+    </form>
+
+    <script src="movieModules.js"></script>
+</body>
+
+</html>
