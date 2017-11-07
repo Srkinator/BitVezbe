@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{  
+    font-family: 'Cabin', sans-serif;  
+    background: url('http://i.imgur.com/hdbiAn2.png') repeat;  
+}
+
+.bg-light{
+    background-color: black !important;
+    color: white;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+}
+
+p {
+    margin: 0;
+}
+
+.navbar-brand {
+    color: rgb(0, 0, 0);
+}
+
+.elementItem {
+    border: 1px solid rgb(138, 138, 138);
+}
+
+.elementItem img {
+    width: 100%;
+    padding: 0;
+}
+.image-div img{
+    width: 100%;
+}
+
+.seasons-div, .cast-div {
+    padding: 20px 50px;
+}
+div{
+    padding: 10px;
+}
+.container-fluid{
+    padding: 0;
+    position: relative;
+}
+.searchList{
+    position: absolute;
+    top: 58px;
+    right: 30px;
+    width: 210px;
+    list-style-type: none;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    z-index: 1;
+    
+}
+.searchList li{
+    padding: 5px;
+    border-bottom: 1px solid rgb(199, 194, 194);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.searchList li:hover{
+    background-color: rgb(238, 238, 238);
+}
+
+.searchList li a {
+    color: rgb(114, 114, 113);
+}
+
+.searchList li a:hover{
+    color: rgb(77, 77, 77);
+    text-decoration: none;
+}
+
+.searchList li:last-child {
+    border: none;
+}
+
+.alert-size {
+    margin: 0 auto;
+    width: 40%;
+}
+
+.card-block {
+    text-align: center;
+}
