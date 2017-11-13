@@ -1,9 +1,9 @@
-import UserThings from './adapterUsers';
-import ReposThings from './adapterRepos';
+import UserThing from './adapterUsers';
+import ReposThing from './adapterRepos';
 
 let outputElement = $('<ul>');
 function run() {
-    new UserThings().getThings(function (data) {
+    new UserThing().getThings(function (data) {
 
         data.forEach(function (element) {
             let listElement = $('<li>');
