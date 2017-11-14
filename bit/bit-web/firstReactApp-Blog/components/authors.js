@@ -3,21 +3,21 @@ import Post from "./post";
 // import data from "../data";
 
 
-class MainContent extends React.Component {
+class Authors extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            data: []
+            authors: []
         };
     }
 
     componentDidMount() {
-        fetch("https://jsonplaceholder.typicode.com/posts")
+        fetch("https://jsonplaceholder.typicode.com/users")
             .then(result => result.json())
             .then(result => {
                 this.setState({
-                    data: result
+                    authors: result
                 });
 
             });
@@ -28,7 +28,7 @@ class MainContent extends React.Component {
             <div className="container">
                 <div className="row">
 
-                    {this.state.data.map((item) => <Post title={item.title} body={item.body} key={item.id} />)};
+                    {this.state.authors.map((item) => <Author name={item.name} key={item.id} />)};
                 </div>
 
             </div>
@@ -36,4 +36,15 @@ class MainContent extends React.Component {
 
     }
 }
-export default MainContent;
+
+
+const Author = function (props) {
+    return (
+        <div>
+            <p>{props.name}</p>
+            <hr />
+        </div>
+    );
+};
+
+export default Authors;
