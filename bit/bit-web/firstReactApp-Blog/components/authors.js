@@ -19,30 +19,27 @@ class Authors extends React.Component {
                 this.setState({
                     authors: result
                 });
-
             });
     }
 
     render() {
+        const numberOfAuthors =  this.state.authors.length
         return (
             <div className="container">
                 <div className="row">
-
+                <h1 style={{ textAlign: "center", marginBottom: "100px"}}>AUTHORS ({numberOfAuthors})</h1>
                     {this.state.authors.map((item) => <Author name={item.name} key={item.id} />)};
                 </div>
-
             </div>
         );
-
     }
 }
-
 
 const Author = function (props) {
     return (
         <div>
             <p>{props.name}</p>
-            <hr />
+            <hr/>
         </div>
     );
 };

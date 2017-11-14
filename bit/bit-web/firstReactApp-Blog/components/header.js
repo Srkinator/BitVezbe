@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const Header = function () {
     return (
-
         <div>
             <nav>
                 <div className="nav-wrapper">
@@ -17,11 +16,7 @@ const Header = function () {
                     </ul>
                 </div>
             </nav>
-
-            <h1 style={{ textAlign: "center" }}>ABOUT</h1>
         </div>
-
     );
 };
-
 export default Header;
