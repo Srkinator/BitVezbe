@@ -26,8 +26,8 @@ class MainContent extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                <h1 style={{ textAlign: "center", marginBottom: "100px"}}>POSTS</h1>
-                {this.state.data.slice(-5).map((item) => <Post title={item.title} body={item.body} key={item.id} />)};
+                    <h1 style={{ textAlign: "center", marginBottom: "100px"}}>POSTS</h1>
+                    {this.state.data.slice(-5).map((item) => <Post title={item.title} body={item.body} key={item.id} postId={item.id} userId={item.userId}/>)};
                 </div>
             </div>
         );

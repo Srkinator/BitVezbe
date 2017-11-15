@@ -1,6 +1,7 @@
 import React from "react";
-import Post from "./post";
-// import data from "../data";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import SingleAuthorInfo from "./singleAuthorInfo";
 
 
 class Authors extends React.Component {
@@ -23,12 +24,12 @@ class Authors extends React.Component {
     }
 
     render() {
-        const numberOfAuthors =  this.state.authors.length
+        const numberOfAuthors = this.state.authors.length;
         return (
             <div className="container">
                 <div className="row">
-                <h1 style={{ textAlign: "center", marginBottom: "100px"}}>AUTHORS ({numberOfAuthors})</h1>
-                    {this.state.authors.map((item) => <Author name={item.name} key={item.id} />)};
+                    <h1 style={{ textAlign: "center", marginBottom: "100px" }}>AUTHORS ({numberOfAuthors})</h1>
+                    {this.state.authors.map((item) => <Author name={item.name} key={item.id} authId={item.id} />)};
                 </div>
             </div>
         );
@@ -37,10 +38,12 @@ class Authors extends React.Component {
 
 const Author = function (props) {
     return (
-        <div>
-            <p>{props.name}</p>
-            <hr/>
-        </div>
+        <Link to={"/SingleAuthorInfo/" + props.authId}>
+            <div>
+                <p>{props.name}</p>
+                <hr />
+            </div>
+        </Link>
     );
 };
 
