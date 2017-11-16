@@ -4,7 +4,6 @@ import PostsFromSameAuthor from "./postsFromSameAuthor";
 class SingleAuthorInfo extends React.Component {
     constructor(props) {
         super(props);
-        console.log(props);
         this.state = {
             authors: {
                 username: "Loading...",

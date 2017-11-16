@@ -14,7 +14,6 @@ class SinglePostInfo extends React.Component {
         fetch(`https://jsonplaceholder.typicode.com/posts/${this.props.match.params.id}`)
             .then(result => result.json())
             .then(result => {
-                console.log(result);
                 this.setState({
                     posts: result
                 });
