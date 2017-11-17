@@ -7,7 +7,6 @@ class PostsFromSameAuthor extends Component {
         console.log(props);
     }
 
-
     render() {
         return (
             <div>

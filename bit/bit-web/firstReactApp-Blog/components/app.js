@@ -7,6 +7,7 @@ import About from "./about";
 import Authors from "./authors";
 import SinglePostInfo from "./singlePostInfo";
 import SingleAuthorInfo from "./singleAuthorInfo";
+import CreatePost from "./composePost";
 
 
 class App extends React.Component {
@@ -17,6 +18,7 @@ class App extends React.Component {
                 <Switch>
                     <Route exact path = '/About' component={About} />
                     <Route exact path = '/Authors' component={Authors} />
+                    <Route exact path = '/Compose' component={CreatePost} />
                     <Route exact path = '/' component={MainContent} />
                     <Route exact path = '/SinglePostInfo/:id' component={SinglePostInfo} />
                     <Route exact path = '/SingleAuthorInfo/:id' component={SingleAuthorInfo} />

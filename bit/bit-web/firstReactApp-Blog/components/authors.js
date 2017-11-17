@@ -28,8 +28,9 @@ class Authors extends React.Component {
         return (
             <div className="container">
                 <div className="row">
+                <p onClick={this.props.history.goBack} className="waves-effect waves-light btn"> Back </p>
                     <h1 style={{ textAlign: "center", marginBottom: "100px" }}>AUTHORS ({numberOfAuthors})</h1>
-                    {this.state.authors.map((item) => <Author name={item.name} key={item.id} authId={item.id} />)};
+                    {this.state.authors.map((item) => <Author name={item.name} key={item.id} authId={item.id} />)}
                 </div>
             </div>
         );

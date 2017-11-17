@@ -34,7 +34,8 @@ class SingleAuthorInfo extends React.Component {
 
     render() {
         return (<div className="container">
-            <div className="row">  
+            <div className="row">
+            <p onClick={this.props.history.goBack} className="waves-effect waves-light btn"> Back </p>
                 <h2 style={{ textAlign: "center", marginBottom: "50px" }}>{this.state.authors.name} </h2>
                 <p style={{ textAlign: "center" }}>User Name : {this.state.authors.username} </p>
                 <p style={{ textAlign: "center" }}>Email : {this.state.authors.email} </p>

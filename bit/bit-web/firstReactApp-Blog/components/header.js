@@ -1,6 +1,7 @@
 import React from "react";
 import Timer from "./timer";
 import { Link } from "react-router-dom";
+import Form from "./form";
 
 
 const Header = function () {
@@ -13,6 +14,7 @@ const Header = function () {
                         <li><Link to='/Authors'>Authors</Link></li>
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/About'>About</Link></li>
+                        <li><Link to='/Compose'>New Post</Link></li>
                     </ul>
                 </div>
             </nav>

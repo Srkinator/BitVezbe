@@ -17,6 +17,7 @@ class SinglePostInfo extends React.Component {
                 this.setState({
                     posts: result
                 });
+                console.log(result);
             });
     }
 
@@ -24,10 +25,11 @@ class SinglePostInfo extends React.Component {
         return (
             <div className ="container">
                 <div className = "row">
+                <p onClick={this.props.history.goBack} className="waves-effect waves-light btn"> Back </p>
                     <h3 style={{ textAlign: "center", marginBottom: "100px"}}>{this.state.posts.title} no.{this.props.match.params.id}</h3>
                     <p style={{ textAlign: "center", marginBottom: "100px"}}>{this.state.posts.body}</p>
                     <hr />
-                    <PostsFromSameAuthor/>
+                    <PostsFromSameAuthor authId= {this.state.posts.userId}/>
                 </div>
             </div>
         );
