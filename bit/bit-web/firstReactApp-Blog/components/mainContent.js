@@ -20,9 +20,9 @@ class MainContent extends React.Component {
             .then(result => result.json())
             .then(result => {
                 let newPosts = localStorage.getItem('posts');
-                let parsed = JSON.parse(newPosts);
-                let parsedPosts = parsed.reverse();
-                if (parsedPosts) {
+                if (newPosts) {
+                    let parsed = JSON.parse(newPosts);
+                    let parsedPosts = parsed.reverse();
                     this.setState({ posts: result, filteredPosts: result, newPosts: parsedPosts });
                 }
                 else {
