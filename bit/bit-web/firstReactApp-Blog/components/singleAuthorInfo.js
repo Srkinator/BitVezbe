@@ -46,14 +46,18 @@ class SingleAuthorInfo extends React.Component {
                     <p style={{ textAlign: "center" }}>Email : {this.state.authors.email} </p>
                     <p style={{ textAlign: "center" }}>Phone : {this.state.authors.phone} </p>
                 </div>
+                <hr />
             </div>
             <div className="row">
-                <div className="col s9">
+                <div className="col s6">
                     <h2 style={{ textAlign: "center" }}>Address</h2>
-                    <Map geo={this.state.authors.address.geo}/>
                     <p style={{ textAlign: "center" }}>Street : {this.state.authors.address.street} </p>
                     <p style={{ textAlign: "center" }}>ZipCode : {this.state.authors.address.zipcode} </p>
                 </div>
+                <div className= "col s6">
+                    <Map geo={this.state.authors.address.geo}/>
+                </div>
+                <hr />
             </div>
             <div className="row">
                 <div className="col s9">
