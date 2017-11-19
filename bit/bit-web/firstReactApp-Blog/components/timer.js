@@ -14,14 +14,14 @@ class Timer extends React.Component{
     componentDidMount(){
         setInterval(() => {
             this.setState({
-                timer: new Date().toString()
+                timer: new Date().toLocaleTimeString()
             });
 
         }, 1000);
     }
 
     render() {
-        return <h1> CurrentTime: {this.state.timer} </h1>;
+        return <h4> CurrentTime: {this.state.timer} </h4>;
     }
 }
 export default Timer;

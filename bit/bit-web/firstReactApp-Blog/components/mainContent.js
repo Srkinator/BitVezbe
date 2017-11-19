@@ -1,7 +1,7 @@
 import React from "react";
 import Post from "./post";
 import Search from "./search";
-// import data from "../data"; import Timer from "./timer";
+import Timer from "./timer";
 
 class MainContent extends React.Component {
     constructor(props) {
@@ -56,6 +56,7 @@ class MainContent extends React.Component {
         return (
             <div className="container">
                 <div className="row">
+                    <Timer />
                     <p onClick={this.props.history.goBack} className="waves-effect waves-light btn"> Back </p>
                     <h1>POSTS</h1>
                     <Search dispatch={this.catchSearch} instant={true} /> {this.renderPosts()}
