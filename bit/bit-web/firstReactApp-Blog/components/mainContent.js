@@ -33,7 +33,7 @@ class MainContent extends React.Component {
 
     catchSearch(searchString) {
         if (!searchString) {
-            this.setState({ filteredPosts: this.state.posts });
+            this.setState({ filteredPosts: [...this.state.posts, ...this.state.newPosts]});
             return;
         }
 

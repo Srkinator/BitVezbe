@@ -13,6 +13,9 @@ class Search extends React.Component {
     
     searchHandler(event){
         this.setState({searchString: event.target.value});
+        if (this.props.instant){
+            this.props.dispatch(event.target.value);
+        }
     }
 
     handleSearchRequest(){
@@ -23,7 +26,7 @@ class Search extends React.Component {
         return (
             <div>
                 <input style={{border: "1px solid"}} onChange={this.searchHandler} type="text" value ={this.state.searchString} />
-                <button onClick={this.handleSearchRequest}> Search </button>
+                { !this.props.instant ? <button onClick={this.handleSearchRequest}> Search </button> : " instant search is on."}
             </div>
         );
     }
