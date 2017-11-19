@@ -21,7 +21,7 @@ class Timer extends React.Component{
     }
 
     render() {
-        return <h4> CurrentTime: {this.state.timer} </h4>;
+        return <h4 style={{ textAlign: "center"}}> CurrentTime: {this.state.timer} </h4>;
     }
 }
 export default Timer;

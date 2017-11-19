@@ -6,3 +6,10 @@ img{
     height: auto;
     padding-top: 20%;
 }
+.nav-wrapper{
+    background-color: #3b5998;	
+}
+
+h1, h2, h3, h4, h5 {
+    color: #3b5998;	
+}
