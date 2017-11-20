@@ -1,7 +1,7 @@
 import React from "react";
 import Timer from "./timer";
 import { Link } from "react-router-dom";
-import Form from "./form";
+import Form from "../posts/form";
 
 
 const Header = function () {

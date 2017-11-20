@@ -1,6 +1,6 @@
 import React from "react";
-import PostsFromSameAuthor from "./postsFromSameAuthor";
-import SingleAuthorInfo from "./singleAuthorInfo";
+import PostsFromSameAuthor from "../author/postsFromSameAuthor";
+import SingleAuthorInfo from "../author/singleAuthorInfo";
 import { Link } from "react-router-dom";
 
 class SinglePostInfo extends React.Component {

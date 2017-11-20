@@ -1,6 +1,6 @@
 import React from "react";
 import PostsFromSameAuthor from "./postsFromSameAuthor";
-import Map from "./Map"
+import Map from "../common/Map";
 
 
 class SingleAuthorInfo extends React.Component {

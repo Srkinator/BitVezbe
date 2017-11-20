@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "./header";
-import Footer from "./footer";
-import MainContent from "./mainContent";
+import Header from "./common/header";
+import Footer from "./common/footer";
+import MainContent from "./posts/mainContent";
 import { Switch, Route } from "react-router-dom";
-import About from "./about";
-import Authors from "./authors";
-import SinglePostInfo from "./singlePostInfo";
-import SingleAuthorInfo from "./singleAuthorInfo";
-import CreatePost from "./composePost";
+import About from "./common/about";
+import Authors from "./author/authors";
+import SinglePostInfo from "./posts/singlePostInfo";
+import SingleAuthorInfo from "./author/singleAuthorInfo";
+import CreatePost from "./posts/composePost";
 
 
 class App extends React.Component {

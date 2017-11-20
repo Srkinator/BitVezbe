@@ -1,7 +1,7 @@
 import React from "react";
 import Post from "./post";
-import Search from "./search";
-import Timer from "./timer";
+import Search from "../common/search";
+import Timer from "../common/timer";
 
 class MainContent extends React.Component {
     constructor(props) {
@@ -10,9 +10,11 @@ class MainContent extends React.Component {
         this.state = {
             newPosts: [],
             posts: [],
-            filteredPosts: []
+            filteredPosts: [],
+            searchString: ''
         };
         this.catchSearch = this.catchSearch.bind(this);
+        this.filterResults = this.filterResults.bind(this);
     }
 
     componentDidMount() {
@@ -31,24 +33,22 @@ class MainContent extends React.Component {
             });
     }
 
-    catchSearch(searchString) {
-        if (!searchString) {
-            this.setState({ filteredPosts: [...this.state.posts, ...this.state.newPosts]});
-            return;
-        }
-
-        const filteredPosts = this.state.posts.filter((post) => {
-            return post.title.includes(searchString);
+    filterResults() {
+        return [...this.state.newPosts, ...this.state.posts].filter((post) => {
+            return post.title.includes(this.state.searchString);
         });
 
         this.setState({ filteredPosts });
     }
 
+    catchSearch(searchString) {
+        this.setState({ searchString });
+    }
+
     renderPosts() {
-        return [...this.state.newPosts, ...this.state.filteredPosts].map((item) => {
+        return this.filterResults().map((item) => {
             return (<Post title={item.title} body={item.body} key={item.id} postId={item.id} userId={item.userId} />);
         });
-
 
     }
 
