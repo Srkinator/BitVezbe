@@ -25,8 +25,8 @@ class Search extends React.Component {
     render() {
         return (
             <div>
-                <input style={{border: "1px solid"}} onChange={this.searchHandler} type="text" value ={this.state.searchString} />
-                { !this.props.instant ? <button onClick={this.handleSearchRequest}> Search </button> : " instant search is on."}
+                <input onChange={this.searchHandler} type="text" value ={this.state.searchString} />
+                { !this.props.instant ? <button className="btn waves-effect waves-teal" onClick={this.handleSearchRequest}> Search </button> : " instant search is on."}
             </div>
         );
     }

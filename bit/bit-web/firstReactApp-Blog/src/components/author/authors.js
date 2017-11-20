@@ -41,7 +41,7 @@ const Author = function (props) {
     return (
         <Link to={"/SingleAuthorInfo/" + props.authId}>
             <div>
-                <p>{props.name}</p>
+                <p style={{fontSize: 20}}> {props.name}</p>
                 <hr />
             </div>
         </Link>

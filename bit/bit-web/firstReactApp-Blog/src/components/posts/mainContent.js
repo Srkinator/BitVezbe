@@ -56,7 +56,7 @@ class MainContent extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                    <Timer />
+                <Timer />
                     <p onClick={this.props.history.goBack} className="waves-effect waves-light btn"> Back </p>
                     <h1 style={{ textAlign: "center" }}>POSTS</h1>
                     <Search dispatch={this.catchSearch} instant={true} /> {this.renderPosts()}
