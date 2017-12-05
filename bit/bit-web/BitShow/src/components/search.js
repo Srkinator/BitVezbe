@@ -12,7 +12,6 @@ class Search extends Component {
     }
 
     searchValue(event) {
-        console.log(event.target.value);
         this.props.dispatch(event.target.value);
     }
 

@@ -42,7 +42,6 @@ class Main extends Component {
     }
 
     catchSearch(searchedString) {
-        console.log(searchedString);
         this.communicationService.searchRequest((response) => {
             this.setState({
                 result: response.data,
@@ -52,14 +51,13 @@ class Main extends Component {
     }
 
     render() {
-        console.log(this.state.result);
         return (
             <div>
                 <div style={{ visibility:this.state.visibility }}>
                     <ul>
                         {this.state.result.map((show) => (
                             <li>
-                                {show.show.name}
+                                <a href={`${show.show.url}`}>{show.show.name}</a>
                             </li>
                         ))}
                     </ul>

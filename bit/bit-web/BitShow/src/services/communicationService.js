@@ -10,7 +10,6 @@ class CommunicationService extends Component {
     getShows(notifyGetRequest) {
         axios.get("http://api.tvmaze.com/shows")
             .then(response => {
-                // console.log(response.data);
                 notifyGetRequest(response.data);
             })
             .catch(error => {
@@ -23,7 +22,6 @@ class CommunicationService extends Component {
     getSingleShow(notifyGetRequest, id) {
         axios.get(`http://api.tvmaze.com/shows/${id}?embed=cast`)
             .then(response => {
-                // console.log(response.data);
                 notifyGetRequest(response.data);
             })
             .catch(error => {
@@ -36,7 +34,6 @@ class CommunicationService extends Component {
     searchRequest(notifyGetRequest, search) {
         axios.get(`http://api.tvmaze.com/search/shows?q=${search}`)
             .then(response => {
-                // console.log(response.data);
                 notifyGetRequest(response);
             })
             .catch(error => {

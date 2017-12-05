@@ -12,7 +12,6 @@ class ShowList extends Component {
     }
 
     render() {
-        console.log(this.state.listOfShows);
         return (
               <div className="container">
                 <div className="row">
