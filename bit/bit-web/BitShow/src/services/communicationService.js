@@ -43,6 +43,18 @@ class CommunicationService extends Component {
             });
     }
 
+
+    getSeasons(notifyGetRequest, id) {
+        axios.get(`http://api.tvmaze.com/shows/${id}/seasons`)
+            .then(response => {
+                notifyGetRequest(response.data);
+            })
+            .catch(error => {
+                console.log(error);
+                let errorMsg = error.response ? error.response.code : "Server unavailable";
+                // handleError(errorMsg);
+            });
+    }
     
 }
 

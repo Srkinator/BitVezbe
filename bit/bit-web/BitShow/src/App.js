@@ -10,7 +10,7 @@ import ShowList from './components/showList';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div >
         <Header />
         <Switch>
           <Redirect exact from  = "/" to ="shows"/>  
