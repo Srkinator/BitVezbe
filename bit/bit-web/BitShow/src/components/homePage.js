@@ -20,15 +20,13 @@ class Main extends Component {
 
         this.communicationService = new CommunicationService();
 
-        this.loadData = this.loadData.bind(this);
-        this.catchSearch = this.catchSearch.bind(this);
     }
 
     componentDidMount() {
         this.loadData();
     }
 
-    loadData() {
+    loadData = () => {
         let listOfShows = [];
         this.communicationService.getShows((response) => {
             response.map((show) => {
@@ -41,7 +39,7 @@ class Main extends Component {
         });
     }
 
-    catchSearch(searchedString) {
+    catchSearch = searchedString => {
         this.communicationService.searchRequest((response) => {
             this.setState({
                 result: response.data,
@@ -53,16 +51,14 @@ class Main extends Component {
     render() {
         return (
             <div>
-                <div style={{ visibility:this.state.visibility }}>
-                    <ul>
-                        {this.state.result.map((show) => (
-                            <li>
-                                <a href={`${show.show.url}`}>{show.show.name}</a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
                 <Search dispatch={this.catchSearch} />
+                <div style={{ visibility: this.state.visibility, position:" absolute",zIndex: 10, backgroundColor:"white", width:"100%"}}>
+                        {this.state.result.map((show) => (
+                            <Link to={`/shows/${show.show.id}`}>
+                                    <p id="search-item" key={show.show.id}>{show.show.name} &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {show.show.rating.average} &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {show.show.genres[0]}</p>
+                            </Link>
+                        ))}
+                </div>
                 <ShowList shows={this.state.listOfShows} />
             </div>
         );

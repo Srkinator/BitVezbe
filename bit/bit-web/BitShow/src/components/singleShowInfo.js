@@ -50,7 +50,6 @@ class SingleShowInfo extends Component {
 
         this.communicationService.getSeasons((response) => {
             response.map((season) => {
-                console.log(season);
                 seasonNumber.push(season.number);
                 seasonEpisodes.push(season.episodeOrder);
             });

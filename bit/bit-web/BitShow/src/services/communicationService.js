@@ -1,11 +1,7 @@
-import React, { Component } from 'react';
 import axios from 'axios';
+import { Component } from 'react';
 
 class CommunicationService extends Component {
-    constructor(props) {
-        super(props);
-        
-    }
     
     getShows(notifyGetRequest) {
         axios.get("http://api.tvmaze.com/shows")
