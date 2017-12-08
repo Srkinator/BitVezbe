@@ -55,7 +55,7 @@ class Main extends Component {
                 <div style={{ visibility: this.state.visibility, position:" absolute",zIndex: 10, backgroundColor:"white", width:"100%"}}>
                         {this.state.result.map((show) => (
                             <Link to={`/shows/${show.show.id}`}>
-                                    <p id="search-item" key={show.show.id}>{show.show.name} &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {show.show.rating.average} &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {show.show.genres[0]}</p>
+                                    <p className="search-item" key={show.show.id}>{show.show.name}</p>
                             </Link>
                         ))}
                 </div>
