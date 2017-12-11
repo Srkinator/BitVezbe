@@ -10,8 +10,7 @@ class CommunicationService extends Component {
             })
             .catch(error => {
                 console.log(error);
-                let errorMsg = error.response ? error.response.code : "Server unavailable";
-                // handleError(errorMsg);
+                // let errorMsg = error.response ? error.response.code : "Server unavailable";
             });
     }
 
@@ -22,8 +21,7 @@ class CommunicationService extends Component {
             })
             .catch(error => {
                 console.log(error);
-                let errorMsg = error.response ? error.response.code : "Server unavailable";
-                // handleError(errorMsg);
+                // let errorMsg = error.response ? error.response.code : "Server unavailable";
             });
     }
 
@@ -34,8 +32,7 @@ class CommunicationService extends Component {
             })
             .catch(error => {
                 console.log(error);
-                let errorMsg = error.response ? error.response.code : "Server unavailable";
-                // handleError(errorMsg);
+                // let errorMsg = error.response ? error.response.code : "Server unavailable";
             });
     }
 
@@ -47,8 +44,7 @@ class CommunicationService extends Component {
             })
             .catch(error => {
                 console.log(error);
-                let errorMsg = error.response ? error.response.code : "Server unavailable";
-                // handleError(errorMsg);
+                // let errorMsg = error.response ? error.response.code : "Server unavailable";
             });
     }
     

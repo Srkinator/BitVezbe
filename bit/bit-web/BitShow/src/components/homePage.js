@@ -51,13 +51,22 @@ class Main extends Component {
     render() {
         return (
             <div>
-                <Search dispatch={this.catchSearch} />
-                <div style={{ visibility: this.state.visibility, position:" absolute",zIndex: 10, backgroundColor:"white", width:"100%"}}>
-                        {this.state.result.map((show) => (
-                            <Link to={`/shows/${show.show.id}`}>
-                                    <p className="search-item" key={show.show.id}>{show.show.name}</p>
-                            </Link>
-                        ))}
+                <div>
+                    <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
+                        <Link to="/shows">
+                            <a className="navbar-brand">MyIMDb</a>
+                        </Link>
+                        <div style={{position:"absolute", right:10, top: 10}}>
+                            <Search dispatch={this.catchSearch} />
+                        </div>
+                    </nav>
+                </div>
+                <div style={{ visibility: this.state.visibility, position: " absolute", zIndex: 10, backgroundColor: "white", width: "100%" }}>
+                    {this.state.result.map((show) => (
+                        <Link to={`/shows/${show.show.id}`}>
+                            <p className="search-item" key={show.show.id}>{show.show.name}</p>
+                        </Link>
+                    ))}
                 </div>
                 <ShowList shows={this.state.listOfShows} />
             </div>
