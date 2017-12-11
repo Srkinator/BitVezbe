@@ -13,7 +13,6 @@ class MainPage extends Component {
             previousVideo: {},
             previousVideoDisplay: "none"
         }
-
     }
 
     componentDidMount() {
@@ -21,16 +20,12 @@ class MainPage extends Component {
     }
 
     loadData = (term) => {
-
         const options = { term, key: API_KEY };
 
         YTSearch(options, (videos) => {
-
-            console.log(videos);
-
             const newVideos = [];
-
             videos.map((video) => {
+                console.log(video);
                 const id = video.id.videoId;
                 const channelTitle = video.snippet.channelTitle;
                 const title = video.snippet.title;
@@ -83,7 +78,7 @@ class MainPage extends Component {
     processVideoUrl = (video) => {
         return (
             <div>
-                <iframe width="90%" height="615" src={`https://www.youtube.com/embed/${video.id}`} frameBorder="0" allowFullScreen title={video.title}></iframe>
+                <iframe width="100%" height="815" src={`https://www.youtube.com/embed/${video.id}`} frameBorder="0" allowFullScreen title={video.title}></iframe>
                 <h5 title={video.title} className="col-12">{video.title}</h5>
             </div>
         );
@@ -99,39 +94,29 @@ class MainPage extends Component {
         );
     }
 
-
-
     logoClickHandler = () => {
         this.loadData("");
     }
 
     render() {
-
         if (this.state.newVideos.length === 0) {
             return <p>Loading...</p>;
         }
 
-        console.log(this.state.previousVideo);
-
         return (
             <div>
                 <div>
-
-
-                    <nav className="navbar navbar-dark bg-dark justify-content-between">
+                    <nav className="navbar navbar-dark bg-primary justify-content-between">
                         <a className="navbar-brand" onClick={this.logoClickHandler} style={{ color: "white" }}>YTSearch</a>
                         <form className="form-inline">
                             <input className="form-control mr-sm-2" onChange={this.handleInputChange} value={this.state.searchTerm} type="text" placeholder="Search" />
                             <button className="btn btn-info my-2 my-sm-0" onClick={this.dispatchSearch}>Search</button>
                         </form>
                     </nav>
-
                     <div className="row">
                         <div className="col-7 offset-1 mainVideoContainer">
                             {this.processVideoUrl(this.state.newVideos[0])}
                         </div>
-
-
                         <div className="col-3 offset-1">
                             <div onClick={this.handleClick} className="previousVideoContainer" style={{ display: this.state.previousVideoDisplay }}>
                                 <h1>Previous video</h1>
@@ -145,7 +130,6 @@ class MainPage extends Component {
                             </div>
                         </div>
                     </div>
-
                 </div >
             </div>
         );
