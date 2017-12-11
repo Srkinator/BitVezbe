@@ -9,7 +9,7 @@ const Header = function () {
         <div>
             <nav>
                 <div className="nav-wrapper">
-                    <a href="#" className="brand-logo">BIT First React APP</a>
+                    <a href="#" className="brand-logo">My Blog APP</a>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         <li><Link to='/Authors'>Authors</Link></li>
                         <li><Link to='/'>Home</Link></li>

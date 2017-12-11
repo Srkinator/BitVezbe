@@ -6,7 +6,6 @@ class PostsFromSameAuthor extends Component {
     constructor(props) {
         super(props);
 
-        console.log('bla: ', props);
         this.state = {
             posts: []
         }
