@@ -63,7 +63,7 @@ class Authors extends React.Component {
 const Author = function (props) {
     return (
         <Link to={"/SingleAuthorInfo/" + props.authId}>
-            <div>
+            <div className ="hoverable">
                 <p style={{ fontSize: 20 }}> {props.name}</p>
                 <hr />
             </div>
