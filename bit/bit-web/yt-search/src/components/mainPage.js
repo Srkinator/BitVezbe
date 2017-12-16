@@ -107,7 +107,7 @@ class MainPage extends Component {
             <div>
                 <div>
                     <nav className="navbar navbar-dark bg-primary justify-content-between">
-                        <a className="navbar-brand" onClick={this.logoClickHandler} style={{ color: "white" }}>YTSearch</a>
+                        <a className="navbar-brand" onClick={this.logoClickHandler} style={{ color: "white" }}>MyYouTube</a>
                         <form className="form-inline">
                             <input className="form-control mr-sm-2" onChange={this.handleInputChange} value={this.state.searchTerm} type="text" placeholder="Search" />
                             <button className="btn btn-info my-2 my-sm-0" onClick={this.dispatchSearch}>Search</button>
