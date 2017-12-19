@@ -18,9 +18,10 @@ class App extends Component {
     this.state = {
       searchTerm: "",
       cityData: null,
-      cityCord: ""
-
+      cityCord: "",
+      error:""
     }
+
     this.handleChange = this.handleChange.bind(this);
     this.searchClick = this.searchClick.bind(this);
     this.searchClick = this.searchClick.bind(this);
@@ -58,6 +59,12 @@ class App extends Component {
         cityData: response.data.list,
         cityCord: response.data.city.coord,
         searchTerm: ""
+      });
+    },
+    error =>{
+      alert("Please enter a valid city");
+      this.setState({
+        searchTerm:""
       });
     });
   }

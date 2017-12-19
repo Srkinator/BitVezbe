@@ -3,9 +3,7 @@ import {BASE_SERVICE_URL} from "../../src/constants";
 import axios from "axios";
 
  class FetchData {
-
-
-    getData(url, query, sucessHandler){
+    getData(url, query, sucessHandler, errorHandler){
 
         const requestUrl = `${BASE_SERVICE_URL}/${url}`;
 
@@ -19,8 +17,9 @@ import axios from "axios";
         .then(response => {
             sucessHandler(response)
         })
-
-        
+        .catch(error =>{
+            errorHandler(error);
+        });
     }
 }
 
