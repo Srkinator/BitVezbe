@@ -6,7 +6,6 @@ import './App.css';
 // import Search from "../src/common/search";
 import { fetchData } from "./services/fetchData";
 import { Sparklines, SparklinesLine, SparklinesReferenceLine } from "react-sparklines";
-import { GoogleMap, Marker, withGoogleMap } from "react-google-maps";
 import MyMapComponent from "./components/googleMap";
 
 const style = {
@@ -47,26 +46,23 @@ class App extends Component {
 
   }
 
-  dispatchSearchOnEnter(){
-    document.getElementById('search').onkeydown = function(e){
-      if(e.keyCode == 13){
+  handleKeyPress =(e)=> {
+    if (e.key === "Enter") {
         this.searchClick();
-      }
-   };
-  }
+    }
+}
 
   searchClick() {
     fetchData.getData("forecast", this.state.searchTerm, response => {
       this.setState({
-
         cityData: response.data.list,
-        cityCord: response.data.city.coord
+        cityCord: response.data.city.coord,
+        searchTerm: ""
       });
     });
   }
 
   render() {
-    console.log(this.state.cityData);
     if (this.state.cityData == null) {
       return <p>loading...</p>
     }
@@ -100,13 +96,13 @@ class App extends Component {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <h1 id="title">Weather Search</h1>
+            <h5 id="title">Weather Search</h5>
           </div>
         </div>
         <div className="row">
           <div className="col-md-10">
             <div className="input-group">
-              <input id= "search" type="text" className="form-control" placeholder="Search for..." onChange={this.handleChange} value={this.state.searchTerm} />
+              <input id= "search" type="text" className="form-control" placeholder="Search for a 5-days city forecast " onKeyDown={this.handleKeyPress} onChange={this.handleChange} value={this.state.searchTerm} />
             </div>
           </div>
           <div className="col-md-2">
@@ -114,7 +110,7 @@ class App extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-8 extra">
+          <div className="col-12 extra">
             <div id="map">
               <MyMapComponent cityCord={this.state.cityCord}
                 isMarkerShown={true}
@@ -125,43 +121,41 @@ class App extends Component {
               />
             </div>
             </div>
-            <div className= "col-4 extra">
-              <h4>Average temperature :{temperatureHourlie[1]}</h4>
-              <h4>Average humidity :{humidityHourlie[1]}</h4>
-              <h4>Average pressure : {pressureArray[1]}</h4>
-              <h4>Average wind speed :{windArray[1]}</h4>
-            </div>
           </div>
           <div className="row">
-          <div className="col-md 6 extra">
-          <h4>Temperature</h4>
+          <div className="col-md-6 extra">
+          <h2 style={{color:"red"}}>Temperature(C)</h2>
             <Sparklines data={temperatureHourlie}>
               <SparklinesLine style={style} color="red" />
               <SparklinesReferenceLine type="mean" />
-            </Sparklines>
+            </Sparklines> 
+              <h2 style={{color:"red"}}>Average temperature : {temperatureHourlie[1]}C</h2>
           </div>
-          <div className="col-md 6 extra">
-          <h4>Humidity</h4>
+          <div className="col-md-6  extra">
+          <h2 style={{color:"blue"}}>Humidity (%)</h2>
             <Sparklines data={humidityHourlie}>
               <SparklinesLine style={style} color="blue" />
               <SparklinesReferenceLine type="mean" />
             </Sparklines>
+              <h2 style={{color:"blue"}}>Average humidity : {humidityHourlie[1]}%</h2>
             </div>
           </div>
           <div className="row">
-          <div className="col-md 6 extra">
-          <h4>Pressure</h4>
+          <div className="col-md-6 extra">
+          <h2 style={{color:"yellow"}}>Pressure (hPa)</h2>
             <Sparklines data={pressureArray}>
               <SparklinesLine style={style} color="yellow" />
               <SparklinesReferenceLine type="mean" />
             </Sparklines>
+              <h2 style={{color:"yellow"}}>Average pressure : {pressureArray[1]}hPa</h2>
           </div>
-          <div className="col-md 6 extra">
-          <h4>Wind speed</h4>
+          <div className="col-md-6 extra">
+          <h2 style={{color:"green"}}>Wind speed (km/h)</h2>
             <Sparklines data={windArray}>
               <SparklinesLine style={style} color="green" />
               <SparklinesReferenceLine type="mean" />
             </Sparklines>
+              <h2 style={{color:"green"}}>Average wind speed : {windArray[1]}km/h</h2>
             </div>
           </div>
       </div>

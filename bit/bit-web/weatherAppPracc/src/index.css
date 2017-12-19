@@ -8,9 +8,9 @@ body {
 #title{
   text-align: center;
   font-size: 26px;
-  color: rgb(250, 250, 250);
-  padding-top:50px;
-  padding-bottom: 50px;
+  color: rgb(70, 206, 252);
+  padding-top:30px;
+  padding-bottom: 20px;
 }
 
 #table{
@@ -18,8 +18,7 @@ body {
 }
 
 .extra{
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   margin-top:30px;
- 
 }
 
